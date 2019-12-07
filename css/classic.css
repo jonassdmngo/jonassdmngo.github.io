@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+body{
+
+    background-image: url(../images/andreas-brucker-g5Uh7nP60FA-unsplash.jpg);
+    background-blend-mode: lighten;
+    height: 100vh;
+    -webkit-background-size:cover;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+
+}
+
+ li {
+
+display: inline-block;
+}
+li a{
+    
+    color: #333333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    
+}
+
+
+.cool-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333333;
+    transition: width 1s ;
+
+    }
+
+.cool-link:hover::after{
+
+    width: 100%;
+    transition: width .3s ;
+
+}
+
+.welcome-text{
+    position:absolute;
+    width:600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+
+}
+.welcome-text h1
+{
+
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase:
+    font-size: 100px ;
+    font-weight: bold;
+    transition: 1s all ease;
+
+}
+
+.welcome-text a 
+{
+    border:1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color:#fff ;
+    transition: 1s all ease;
+}
+
+.welcome-text a:hover{
+    background: #fff;
+    color:#333333;
+}
+
+.welcome-text a::before{
+    background: #ff7675;
+    content: " ";
+    position: absolute;
+    top:50px;
+    left:50px;
+    transform:translate(-50% , -50%);
+    z-index:  -1 ;
+    transition: all 0.00s ease;
+
+}
+a:link,
+a:visited{
+ text-decoration: none;
+}
+.modal{
+    background-color: rgba(0,0,0, .8);
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+   }
+   .modal__content{
+    width: 80%;
+    height: 80%;
+    background: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    overflow: overlay;
+   }
+   #modal:target{
+    opacity: 1;
+    visibility: visible;
+   }
+   #modal:target .modal__content{
+    opacity: 1;
+    visibility: visible;
+   }
+   .modal__close{
+    color: #363636;
+    font-size: 2em;
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    z-index: 1;
+   }
+
+
+   .main-container{
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    text-align:center;
+    
+   }
+
+   .heading{
+    padding-top:80px;
+    color:#444;
+    font-size: 20px;
+    border-bottom: 2px solid #333:
+     line-height: 80px;
+}
+   .sub-container{
+    max-width:1200px;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   .members{
+    margin: 10px;
+    padding: 20px;
+    max-width: 30%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+   }
+
+   .members:hover{
+    background: #ddd;
+     transform: scale(1.1);
+
+   }
+
+   .members img{
+    width: 100px;
+    height: 100px;
+    border:1px solid #E1E0DE;
+    border-radius: 50%
+   }
+
+.post{
+    color:#999;
+    font-style: italic;
+}
+.desc{
+    margin: 20px;
+    text-align: justify;
+    font-weight:lighter;
+    line-height: 25px;
+    color:#4e4e4e;
+}
+
+.social-media {
+    margin:5px;
+}
+
+.social-media a{
+    display: inline-block;
+    height: 20px;
+    width:30px;
+    transition: 0.2s;
+}
+
+.social-media a:hover{
+    transform: scale(1.3);
+
+}
+.social-media a i{
+    color:blue;
+}
+
+@media screen and (max-width: 980px){
+    .members{
+
+        max-height: 45%;
+    }
+}
+media screen and (max-width: 600px){
+    .members{
+
+        max-height: 100px%;
+    }
+}

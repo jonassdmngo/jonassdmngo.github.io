@@ -1,0 +1,21 @@
+#mamamo{
+    fill:blue;
+    
+}
+#mimaropa{
+    fill:yellow;
+}
+#mamamo:hover{
+    fill:black !important;
+    cursor:pointer;
+}
+#mimaropa:hover{
+    fill:black !important;
+    cursor:pointer;
+}
+#mamamo:selected{
+    fill:grey;
+}
+#mimaropa:selected{
+    fill:grey;
+}
